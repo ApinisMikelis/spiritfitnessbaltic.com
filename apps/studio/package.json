@@ -1,0 +1,42 @@
+{
+  "name": "@mono/studio",
+  "private": true,
+  "version": "1.0.0",
+  "main": "package.json",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "dotenv -e ../../.env -- sanity dev",
+    "build": "dotenv -e ../../.env -- sanity build",
+    "start": "dotenv -e ../../.env -- sanity start",
+    "deploy": "dotenv -e ../../.env -- sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@mono/environment-config": "workspace:*",
+    "@mono/ui": "workspace:*",
+    "@sanity/vision": "^4.14.2",
+    "dotenv": "^17.2.3",
+    "dotenv-cli": "^11.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sanity": "^4.14.2",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@mono/typescript-config": "workspace:*",
+    "@sanity/eslint-config-studio": "^5.0.2",
+    "@types/react": "^19.2.2",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
+  }
+}

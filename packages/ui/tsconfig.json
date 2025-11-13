@@ -1,0 +1,8 @@
+{
+  "extends": "@mono/typescript-config/react-library.json",
+  "compilerOptions": {
+    "strict": true
+  },
+  "include": ["src", "tsup.config.ts"],
+  "exclude": ["dist", "build", "node_modules"]
+}

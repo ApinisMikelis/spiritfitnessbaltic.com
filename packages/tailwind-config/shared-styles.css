@@ -1,0 +1,374 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight111: #121063;
+  --color-tahiti111: #3ab7bf;
+  --color-bermuda111: #78dcca;
+
+  --color-neutral-900: #282924;
+  --color-neutral-500: #6d6e68;
+  --color-neutral-300: #bfc0b9;
+  --color-neutral-200: #e2e3de;
+  --color-neutral-100: #f4f5f2;
+  --color-neutral-000: #ffffff;
+
+  --color-primary-900: #052649;
+  --color-primary-500: #083d77;
+  --color-primary-300: #60a6f1;
+  --color-primary-200: #bedbfa;
+  --color-primary-100: #e7f0f9;
+
+  --color-secondary-900: #413628;
+  --color-secondary-500: #735b2f;
+  --color-secondary-300: #a19079;
+  --color-secondary-200: #e5dac8;
+  --color-secondary-100: #f7f4eb;
+
+  --color-success-900: #113312;
+  --color-success-500: #6dc070;
+  --color-success-200: #d1ebd2;
+  --color-success-100: #e6f7e7;
+
+  --color-warning-900: #544200;
+  --color-warning-500: #f4d35e;
+  --color-warning-200: #f2e6b5;
+  --color-warning-100: #fcf5d9;
+
+  --color-error-900: #5c0000;
+  --color-error-500: #f75a5a;
+  --color-error-200: #f2d8d8;
+  --color-error-100: #faeded;
+
+  --color-info-900: #282924;
+  --color-info-500: #bfc0b9;
+  --color-info-200: #e2e3de;
+  --color-info-100: #f4f5f2;
+
+  --color-opacity-500: #2829244f;
+  --color-opacity-300: #28292430;
+  --color-opacity-200: #28292421;
+  --color-opacity-100: #2829240f;
+
+  --focus-dark: drop-shadow(6px 6px 0px #36f) drop-shadow(6px -6px 0px #36f)
+    drop-shadow(-6px -6px 0px #36f) drop-shadow(-6px 6px 0px #36f)
+    drop-shadow(3px 3px 0px #fff) drop-shadow(3px -3px 0px #fff)
+    drop-shadow(-3px -3px 0px #fff) drop-shadow(-3px 3px 0px #fff);
+  --focus-light: drop-shadow(6px 6px 0px #ebf0ff)
+    drop-shadow(6px -6px 0px #ebf0ff) drop-shadow(-6px -6px 0px #ebf0ff)
+    drop-shadow(-6px 6px 0px #ebf0ff) drop-shadow(3px 3px 0px #000)
+    drop-shadow(3px -3px 0px #000) drop-shadow(-3px -3px 0px #000)
+    drop-shadow(-3px 3px 0px #000);
+
+  /* Shadows */
+  --shadow-600: drop-shadow(0px 20px 15px rgba(16, 24, 64, 0.04))
+    drop-shadow(0px 25px 40px rgba(16, 24, 64, 0.1))
+    drop-shadow(0px -2px 20px rgba(16, 24, 64, 0.03));
+  --shadow-500: drop-shadow(0px 10px 10px rgba(16, 24, 64, 0.04))
+    drop-shadow(0px 20px 25px rgba(16, 24, 64, 0.1))
+    drop-shadow(0px -2px 15px rgba(16, 24, 64, 0.03));
+  --shadow-400: drop-shadow(0px 4px 6px rgba(16, 24, 64, 0.05))
+    drop-shadow(0px 10px 15px rgba(16, 24, 64, 0.1));
+  --shadow-200: drop-shadow(0px 5px 10px rgba(16, 24, 64, 0.06));
+
+  /* Line height - Mobile */
+  --spacing-size-text-2: 8px;
+  --spacing-size-text-2-5: 10px;
+  --spacing-size-text-3: 12px;
+  --spacing-size-text-3-5: 14px;
+  --spacing-size-text-4: 16px;
+  --spacing-size-text-5: 18px;
+  --spacing-size-text-6: 20px;
+  --spacing-size-text-7: 20px;
+  --spacing-size-text-8: 24px;
+  --spacing-size-text-9: 24px;
+  --spacing-size-text-10: 32px;
+  --spacing-size-text-12: 36px;
+  --spacing-size-text-14: 40px;
+  --spacing-size-text-16: 48px;
+  --spacing-size-text-18: 48px;
+  --spacing-size-text-20: 48px;
+  --spacing-size-text-22: 48px;
+  --spacing-size-text-24: 56px;
+  --spacing-size-text-26: 64px;
+  --spacing-size-text-28: 64px;
+  --spacing-size-text-32: 64px;
+
+  /* Typography - Mobile */
+  --text-size-text-2: 8px;
+  --text-size-text-2-5: 10px;
+  --text-size-text-3: 12px;
+  --text-size-text-3-5: 14px;
+  --text-size-text-4: 16px;
+  --text-size-text-5: 18px;
+  --text-size-text-6: 20px;
+  --text-size-text-7: 20px;
+  --text-size-text-8: 24px;
+  --text-size-text-9: 24px;
+  --text-size-text-10: 32px;
+  --text-size-text-12: 36px;
+  --text-size-text-14: 40px;
+  --text-size-text-16: 48px;
+  --text-size-text-18: 48px;
+  --text-size-text-20: 48px;
+  --text-size-text-22: 48px;
+  --text-size-text-24: 56px;
+  --text-size-text-26: 64px;
+  --text-size-text-28: 64px;
+  --text-size-text-32: 64px;
+
+  /* Corner Radius - Mobile  */
+  --radius-0-5: 2px;
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --radius-3: 12px;
+  --radius-4: 16px;
+  --radius-5: 16px;
+  --radius-6: 20px;
+  --radius-8: 24px;
+  --radius-10: 32px;
+  --radius-12: 32px;
+  --radius-14: 32px;
+  --radius-16: 48px;
+  --radius-20: 48px;
+  --radius-28: 56px;
+  --radius-40: 40px;
+  --radius-250: 1000px;
+
+  /* Spacing - Mobile */
+  --spacing-0-5: 2px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 16px;
+  --spacing-6: 20px;
+  --spacing-7: 20px;
+  --spacing-8: 24px;
+  --spacing-9: 24px;
+  --spacing-10: 32px;
+  --spacing-12: 36px;
+  --spacing-14: 40px;
+  --spacing-16: 48px;
+  --spacing-18: 48px;
+  --spacing-20: 48px;
+  --spacing-22: 48px;
+  --spacing-24: 48px;
+  --spacing-28: 56px;
+  --spacing-32: 56px;
+  --spacing-40: 56px;
+}
+
+:root {
+  @media (min-width: 640px) {
+    /* Line height - Tablet */
+    --spacing-size-text-2: 8px;
+    --spacing-size-text-2-5: 10px;
+    --spacing-size-text-3: 12px;
+    --spacing-size-text-3-5: 14px;
+    --spacing-size-text-4: 16px;
+    --spacing-size-text-4-5: 18px;
+    --spacing-size-text-5: 20px;
+    --spacing-size-text-6: 20px;
+    --spacing-size-text-7: 24px;
+    --spacing-size-text-8: 28px;
+    --spacing-size-text-9: 32px;
+    --spacing-size-text-10: 36px;
+    --spacing-size-text-12: 40px;
+    --spacing-size-text-14: 48px;
+    --spacing-size-text-16: 56px;
+    --spacing-size-text-18: 56px;
+    --spacing-size-text-20: 64px;
+    --spacing-size-text-22: 72px;
+    --spacing-size-text-24: 80px;
+    --spacing-size-text-26: 96px;
+    --spacing-size-text-28: 96px;
+    --spacing-size-text-32: 96px;
+
+    /* Typography - Tablet */
+    --text-size-text-2: 8px;
+    --text-size-text-2-5: 10px;
+    --text-size-text-3: 12px;
+    --text-size-text-3-5: 14px;
+    --text-size-text-4: 16px;
+    --text-size-text-4-5: 18px;
+    --text-size-text-5: 20px;
+    --text-size-text-6: 20px;
+    --text-size-text-7: 24px;
+    --text-size-text-8: 28px;
+    --text-size-text-9: 32px;
+    --text-size-text-10: 36px;
+    --text-size-text-12: 40px;
+    --text-size-text-14: 48px;
+    --text-size-text-16: 56px;
+    --text-size-text-18: 56px;
+    --text-size-text-20: 64px;
+    --text-size-text-22: 72px;
+    --text-size-text-24: 80px;
+    --text-size-text-26: 96px;
+    --text-size-text-28: 96px;
+    --text-size-text-32: 96px;
+
+    /* Corner Radius - Tablet  */
+    --radius-0-5: 2px;
+    --radius-1: 4px;
+    --radius-2: 8px;
+    --radius-3: 12px;
+    --radius-4: 16px;
+    --radius-5: 20px;
+    --radius-6: 20px;
+    --radius-8: 24px;
+    --radius-10: 32px;
+    --radius-12: 40px;
+    --radius-14: 48px;
+    --radius-16: 56px;
+    --radius-20: 64px;
+    --radius-28: 96px;
+    --radius-40: 128px;
+    --radius-250: 1000px;
+
+    /* Spacing - Mobile */
+    --spacing-0-5: 2px;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 16px;
+    --spacing-6: 20px;
+    --spacing-7: 24px;
+    --spacing-8: 28px;
+    --spacing-9: 32px;
+    --spacing-10: 36px;
+    --spacing-12: 40px;
+    --spacing-14: 48px;
+    --spacing-16: 56px;
+    --spacing-18: 56px;
+    --spacing-20: 64px;
+    --spacing-22: 72px;
+    --spacing-24: 80px;
+    --spacing-28: 80px;
+    --spacing-32: 96px;
+    --spacing-40: 96px;
+  }
+
+  @media (min-width: 1024px) {
+    /* Line height - Desktop */
+    --spacing-size-text-2: 8px;
+    --spacing-size-text-2-5: 10px;
+    --spacing-size-text-3: 12px;
+    --spacing-size-text-3-5: 14px;
+    --spacing-size-text-4: 16px;
+    --spacing-size-text-4-5: 18px;
+    --spacing-size-text-5: 20px;
+    --spacing-size-text-6: 24px;
+    --spacing-size-text-7: 28px;
+    --spacing-size-text-8: 32px;
+    --spacing-size-text-9: 36px;
+    --spacing-size-text-10: 40px;
+    --spacing-size-text-12: 48px;
+    --spacing-size-text-14: 56px;
+    --spacing-size-text-16: 64px;
+    --spacing-size-text-18: 72px;
+    --spacing-size-text-20: 80px;
+    --spacing-size-text-22: 88px;
+    --spacing-size-text-24: 96px;
+    --spacing-size-text-26: 104px;
+    --spacing-size-text-28: 112px;
+    --spacing-size-text-32: 128px;
+
+    /* Typography - Desktop */
+    --text-size-text-2: 8px;
+    --text-size-text-2-5: 10px;
+    --text-size-text-3: 12px;
+    --text-size-text-3-5: 14px;
+    --text-size-text-4: 16px;
+    --text-size-text-4-5: 18px;
+    --text-size-text-5: 20px;
+    --text-size-text-6: 24px;
+    --text-size-text-7: 28px;
+    --text-size-text-8: 32px;
+    --text-size-text-9: 36px;
+    --text-size-text-10: 40px;
+    --text-size-text-12: 48px;
+    --text-size-text-14: 56px;
+    --text-size-text-16: 64px;
+    --text-size-text-18: 72px;
+    --text-size-text-20: 80px;
+    --text-size-text-22: 88px;
+    --text-size-text-24: 96px;
+    --text-size-text-26: 104px;
+    --text-size-text-28: 112px;
+    --text-size-text-32: 128px;
+
+    /* Corner Radius - Tablet  */
+    --radius-0-5: 2px;
+    --radius-1: 4px;
+    --radius-2: 8px;
+    --radius-3: 12px;
+    --radius-4: 16px;
+    --radius-5: 20px;
+    --radius-6: 24px;
+    --radius-8: 32px;
+    --radius-10: 40px;
+    --radius-12: 48px;
+    --radius-14: 56px;
+    --radius-16: 64px;
+    --radius-20: 80px;
+    --radius-28: 112px;
+    --radius-40: 160px;
+    --radius-250: 1000px;
+
+    /* Spacing - Mobile */
+    --spacing-0-5: 2px;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-7: 28px;
+    --spacing-8: 32px;
+    --spacing-9: 36px;
+    --spacing-10: 40px;
+    --spacing-12: 48px;
+    --spacing-14: 56px;
+    --spacing-16: 64px;
+    --spacing-18: 72px;
+    --spacing-20: 80px;
+    --spacing-22: 88px;
+    --spacing-24: 96px;
+    --spacing-28: 112px;
+    --spacing-32: 128px;
+    --spacing-40: 160px;
+  }
+}
+
+.grid-rows-1fr {
+  grid-template-rows: 1fr;
+}
+
+.grid-rows-0fr {
+  grid-template-rows: 0fr;
+}
+
+.tooltip,
+.popover {
+  &[data-entering] {
+    animation: opacity 200ms;
+  }
+
+  &[data-exiting] {
+    animation: opacity 200ms reverse ease-in;
+  }
+}
+
+@keyframes opacity {
+  from {
+    transform: translateY(-30);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

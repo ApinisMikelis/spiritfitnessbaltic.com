@@ -1,0 +1,51 @@
+@import "@mono/ui/styles.css";
+@import "@mono/tailwind-config";
+
+@config "../../tailwind.config.js";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.fade-transition {
+  opacity: 0;
+  background: black;
+  transform: translateY(40px);
+  filter: blur(12px);
+}
+
+.morph-transition {
+  opacity: 0;
+  transform: scale(1.2) rotateX(15deg);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  filter: blur(4px);
+}
+
+.slide-transition {
+  opacity: 0;
+  transform: scale(0.5);
+  filter: blur(8px);
+}
+
+.scale-transition {
+  opacity: 0;
+  transform: scale(0.5);
+  filter: blur(8px);
+}
